@@ -16,5 +16,5 @@ commands:
 - echo Build completed on `date`
 artifacts:
 files:
-- '**/java-helloworld.war'
+- '**/helloworld.war'
 discard-paths: yes
