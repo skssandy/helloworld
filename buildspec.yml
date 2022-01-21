@@ -1,9 +1,17 @@
 version: 0.2
 
 phases:
-  install:
-    commands:
-      - npm install
-  build:
-    commands:
-      - npm test
+install:
+runtime-versions:
+java: corretto11
+pre_build:
+commands:
+- echo Nothing to do in the pre_build phase...
+build:
+- echo Build started on `date`
+- mvn install
+post_build:
+- echo Build completed on `date`
+artifacts:
+files:
+- '**/helloworld.war'
